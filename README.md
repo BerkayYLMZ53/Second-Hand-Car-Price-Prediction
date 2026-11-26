@@ -1,28 +1,60 @@
-# 🚗 Used Car Price Prediction (Linear Regression)
+# Used Car Price Prediction with Linear Regression
 
-This project is a machine learning study developed to predict the market selling price of used cars by analyzing their technical specifications and sales data. An end-to-end regression analysis workflow was implemented.
+An end-to-end machine learning project that explores how vehicle characteristics relate to used-car selling prices and builds a baseline regression model for price estimation.
 
-## 🎯 Project Objective
-To analyze the impact of variables such as model year, mileage, fuel type, current new price, and transmission type on used car market values, and to build a model capable of predicting prices based on these features.
+## Project objective
 
-## 📊 Dataset and Preprocessing
-The **"Vehicle Dataset"** obtained from Kaggle was used in this project. During the data preprocessing and modeling stages, a **Scikit-Learn Pipeline** architecture was utilized to ensure modular and clean code:
-* **Feature Scaling:** `StandardScaler` normalization was applied to numerical features (such as age and mileage) to prevent scale disparities from affecting model training.
-* **Categorical Transformations:** Textual features such as fuel type and transmission were encoded into numerical formats suitable for the model.
+The goal is to study the relationship between features such as model year, mileage, fuel type, transmission, and new-car price, and to estimate a used vehicle's selling price from those attributes.
 
-## 🛠️ Technologies and Methods Used
-* **Programming Language:** Python
-* **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn
-* **Algorithm:** Linear Regression
+## Dataset and preprocessing
 
-## 📈 Model Performance and Results
-The trained model was evaluated on the test data, indicating its ability to capture the linear relationships between the independent variables and the target variable:
-* **$R^2$ Score (Coefficient of Determination):** `0.8853` (88.5%) — The model accounts for approximately 88.5% of the variance in car prices.
-* **MAE (Mean Absolute Error):** `1.23` — The model's price predictions deviate from the actual prices by an average of 1.23 units.
+The project uses the **Vehicle Dataset** from Kaggle. The workflow includes:
 
-## 🚀 Running the Project Locally
+- Preparing numerical and categorical features.
+- Scaling numerical variables with `StandardScaler`.
+- Encoding categorical variables for model training.
+- Combining preprocessing and estimation in a Scikit-learn Pipeline.
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/BerkayYLMZ5353/car-price-prediction.git
-   ```
+## Technologies
+
+- Python
+- Pandas and NumPy
+- Matplotlib and Seaborn
+- Scikit-learn
+- Linear Regression
+
+## Model evaluation
+
+The reported test-set results in this project are:
+
+| Metric | Result | Interpretation |
+|---|---:|---|
+| R² (coefficient of determination) | 0.8853 | The model explains approximately 88.53% of the variance in the test target values. |
+| MAE (mean absolute error) | 1.23 | The average absolute prediction error is 1.23 units in the dataset's target-price scale. |
+
+These are results from this project's experiment, not a guarantee of performance on other datasets or future market prices. The MAE unit follows the dataset's price unit; check the dataset documentation before interpreting it as a specific currency amount.
+
+## Run locally
+
+Clone this repository:
+
+```bash
+git clone https://github.com/BerkayYLMZ53/Second-Hand-Car-Price-Prediction.git
+cd Second-Hand-Car-Price-Prediction
+```
+
+Install the dependencies:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+Open the notebook:
+
+```bash
+jupyter notebook
+```
+
+## Notes
+
+This is an educational machine learning project. Predictions should be interpreted as estimates from the selected dataset and model, not as professional vehicle valuations.
